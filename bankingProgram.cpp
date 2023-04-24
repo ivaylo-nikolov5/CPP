@@ -51,6 +51,10 @@ void displayAtm() {
 }
 
 double deposit(double balance, double value) {
+    if (value <= 0) {
+        std::cout << "You are trying to deposit incompatible amount of money!\n";
+        return 0;
+    }
     balance += value;
     checkBalance(balance);
     return balance;
@@ -61,7 +65,10 @@ double withdraw(double balance, double value) {
         // refers to Mr. Tate 😎
         std::cout << "You don't have enough money in your account, you wagey, peasant, a peon, brokey!\n";
         return 0;
-    } 
+    } else if (value <= 0) {
+        std::cout << "You are trying to withdraw incompatible amount of money!\n";
+        return 0;
+    }
 
     balance -= value;
     checkBalance(balance);
