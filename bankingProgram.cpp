@@ -13,10 +13,13 @@ int main() {
     double balance = 0.00;
 
     while (option != 4) {
+        double value;
         displayAtm();
         std::cout << "Choose an option: ";
         std::cin >> option;
-        double value;
+        
+        std::cin.clear();
+        fflush(stdin);
 
         switch (option) {
             case 1:
