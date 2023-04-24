@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 void displayAtm();
 double deposit(double balance, double value); 
@@ -68,5 +69,5 @@ double withdraw(double balance, double value) {
 }
 
 void checkBalance(double balance) {
-    std::cout << "Your current balance is: " << balance << "$\n";
+    std::cout << "Your current balance is: " << std::setprecision(2) << std::fixed << balance << "$\n";
 }
