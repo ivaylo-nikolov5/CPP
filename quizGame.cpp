@@ -14,8 +14,10 @@ int main() {
                                 {"a) C", "b) C#", "c) Java", "d) Python"},
                                 {"a) Yes", "b) No"}};
 
-    int questionsSize = sizeof(questions) / sizeof(questions[0]);
+    char answerKey[] = {'c', 'b', 'a', 'b'};
 
+    int questionsSize = sizeof(questions) / sizeof(questions[0]);
+    
     std::cout << "***************** C++ Quiz *****************\n";
     std::cout << "Answer only with the letter of the option you chose!\n";
 
@@ -32,10 +34,7 @@ int main() {
         std::cin.clear();
         fflush(stdin);
 
-        if (i == 0 && answer == 'c' ||
-            i == 1 && answer == 'b' ||
-            i == 2 && answer == 'a' ||
-            i == 3 && answer == 'b') {
+        if (answerKey[i] == answer) {
             std::cout << "Correct answer!\n";
             continue;
         }
