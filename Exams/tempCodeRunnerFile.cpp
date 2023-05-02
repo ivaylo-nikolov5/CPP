@@ -1,1 +1,2 @@
-std::cout << price;
+ std::cin.clear();
+        fflush(stdin);
